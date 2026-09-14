@@ -1,0 +1,17 @@
+Target:
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+Solution:
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& num) {
+        sort(num.begin(), num.end());
+        for(int i=1; i<num.size(); i++){
+            if(num[i] == num[i-1]){
+                return true;
+            }
+        }
+        return false;
+    }
+};
